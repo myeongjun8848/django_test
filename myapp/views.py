@@ -1,3 +1,4 @@
 from django.shortcuts import render
 
-# Create your views here.
+def DisplayMyPage(request):
+    return render(request, 'myapp/mypage.html', {'welcome_text' : 'hello_world'})

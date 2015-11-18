@@ -1,10 +1,9 @@
 from django.conf.urls import include, url
 from django.contrib import admin
 
-urlpatterns = [
-    # Examples:
-    # url(r'^$', 'myproject.views.home', name='home'),
-    # url(r'^blog/', include('blog.urls')),
+from myapp import views as MyAppView
 
+urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^mypage/', MyAppView.DisplayMyPage),
 ]
